@@ -14,18 +14,13 @@ os:
   - windows
   - freebsd
 arch:
-  - arm64
   - amd64
-  - ppc64le
-  - s390x
-jobs:
-  allow_failures:
-    - os: 
-      - windows
-    - node_js:
-      - 11
-    - os: 
-      - freebsd
+  - arm64-graviton2
+
+virt: lxd
+
+group: edge
+
 branches:
   only:
     - devel
